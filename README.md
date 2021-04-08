@@ -31,19 +31,19 @@ maven环境中运行：mvn package appassembler:assemble
 
 ************************************************************     
      
-#rabbitmq配置
-spring.rabbitmq.host=localhost
-spring.rabbitmq.port=5672
-#rabbitmq登陆用户名
-spring.rabbitmq.username=admin
-#rabbitmq登陆密码
-spring.rabbitmq.password=123456
-#spring.rabbitmq.virtualHost=test
-
-#下级平台tcp连接端口，注意操作系统配置防火墙允许该端口
-server.port=6039 
+#rabbitmq配置    
+spring.rabbitmq.host=localhost    
+spring.rabbitmq.port=5672    
+#rabbitmq登陆用户名    
+spring.rabbitmq.username=admin    
+#rabbitmq登陆密码    
+spring.rabbitmq.password=123456    
+#spring.rabbitmq.virtualHost=test    
+    
+#下级平台tcp连接端口，注意操作系统配置防火墙允许该端口    
+server.port=6039     
      
-*************************************************************
+*************************************************************    
 
 注：server.tcp.port=6039 该配置为车载终端连接的TCP端口，操作系统防火墙需要开放该端口     
 
@@ -62,15 +62,4 @@ server.port=6039
 
 
 本软件为免费版本，觉得好用请支持正版软件，后续会陆续退出更多免费的版本，敬请关注，谢谢！    
-
-**捐助** 
-   
-若喜欢，请支持，谢谢！
-
-![image](https://www.legaoyi.com/images/pay.png) 
-
-
-
-
-
 
