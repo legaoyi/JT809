@@ -52,6 +52,15 @@
 	</dependencies>
 
 	<build>
+	    <resources>
+		   <resource>
+		        <directory>${project.basedir}/lib</directory>
+		        <targetPath>${project.build.directory}/elink-iov-exchange-client-processor/lib</targetPath>
+		        <includes>
+		            <include>**/*.jar</include>
+		        </includes>
+		    </resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
