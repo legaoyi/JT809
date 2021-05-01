@@ -1,6 +1,6 @@
 **易联车联网数据交换中间件** 
 
-车联网数据交换中间件采用netty/mina作为底层架构，是一个基于《JT/T809-2011 中华人民共和国交通运输行业标准》的数据交换中间件，采用MQ以json消息（支持RabbitMQ/ActiveMQ）与业务平台进行交互，能够无缝接入各种异构系统，连接企业之间的车辆监控系统，实现数据互通。本网关应用已历经并通过多次交通部部标的检测，性能稳定，适用于车辆监控平台之间的实时数据交换，经测试在普通pc机上，单个网关应用可支持1000wGPS数据/小时的数据处理能力。
+车联网数据交换中间件采用netty/mina作为底层架构，是一个基于《JT/T809-2011 中华人民共和国交通运输行业标准》/《JT/T809-2019 中华人民共和国交通运输行业标准》的数据交换中间件，采用MQ以json消息（支持RabbitMQ/ActiveMQ）与业务平台进行交互，能够无缝接入各种异构系统，连接企业之间的车辆监控系统，实现数据互通。本网关应用已历经并通过多次交通部部标的检测，性能稳定，适用于车辆监控平台之间的实时数据交换，经测试在普通pc机上，单个网关应用可支持1000wGPS数据/小时的数据处理能力。
 
 **技术特点** 
 
@@ -27,7 +27,7 @@ maven环境中运行：mvn package appassembler:assemble
 
 **配置文件** 
 
-软件conf目前下的所有配置文件都必须保留，不能删除，否则将会导致软件无法运行。使用软件时，请根据实际情况修改conf目录下的配置文件application.properties中的activemq配置部分，如下：
+软件conf目前下的所有配置文件都必须保留，不能删除，否则将会导致软件无法运行。使用软件时，请根据实际情况修改conf目录下的配置文件application.properties中的rabbitmq配置部分，如下：
 
 ************************************************************     
      
@@ -49,10 +49,13 @@ server.port=6039
 
 **软件模块** 
 
-1、elink-iov-exchange-server 为数据交换中间件服务端（上级平台），下级连接该软件程序     
+1、elink-iov-exchange-server 为数据交换中间件服务端（上级平台），下级平台连接该软件程序，可配合elink-iov-exchange-client测试JT/T809协议流程     
 
-2、elink-iov-exchange-server-processor  为消息处理应用程序，开发者可根据自身业务进行二次开发
+2、elink-iov-exchange-server-processor  为上级平台消息处理应用程序，连接elink-iov-exchange-server进行上级平台业务处理，开发者可根据自身业务进行二次开发 
 
+3、elink-iov-exchange-client 为数据交换中间件客户端（下级平台），可配合elink-iov-exchange-server测试JT/T809协议流程     
+
+4、elink-iov-exchange-client-processor  为下级平台消息处理应用程序，连接elink-iov-exchange-client进行下级平台业务处理，开发者可根据自身业务进行二次开发 
 
 **软件运行** 
 
