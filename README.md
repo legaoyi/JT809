@@ -19,7 +19,7 @@
 平台的运行依赖java环境，安装jdk1.8以上版本     
 
 - RabbitMQ环境     
-软件的运行依赖RabbitMQ环境，ActiveMQ安装最新版本    
+软件的运行依赖RabbitMQ环境，RabbitMQ安装最新版本    
 
 
 **程序打包编译**     
