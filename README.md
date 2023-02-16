@@ -57,6 +57,8 @@ server.port=6039
 
 4、elink-iov-exchange-client-processor  为下级平台消息处理应用程序，连接elink-iov-exchange-client进行下级平台业务处理，开发者可根据自身业务进行二次开发 
 
+5、elink-iov-exchange-server-message-processor  为上级平台消息处理应用程序，连接elink-iov-exchange-server旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发 
+
 **软件运行** 
 
 1、window：双击bin/startup.bat文件即可启动；
