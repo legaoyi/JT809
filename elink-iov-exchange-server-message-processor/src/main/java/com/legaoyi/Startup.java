@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @author <a href="mailto:shengbo.gao@gmail.com;78772895@qq.com">gaoshengbo</a>
@@ -12,6 +13,7 @@ import org.springframework.context.annotation.Bean;
  */
 @SpringBootApplication
 @EnableCaching
+@EnableScheduling
 public class Startup {
 
     public static void main(String[] args) {

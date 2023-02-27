@@ -27,6 +27,4 @@ public class Constants {
     public static final String MAP_KEY_PROTOCOL = "protocol";
 
     public static final String MAP_KEY_PROTOCOL_VERSION = "protocolVersion";
-
-
 }

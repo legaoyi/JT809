@@ -19,9 +19,7 @@ public class DefaultMessageBuilder {
     private static Map<String, String> respMessageMap = new HashMap<String, String>();
 
     static {
-        respMessageMap.put("1001", "1002");
         respMessageMap.put("1003", "1004");
-
         respMessageMap.put("1207", "9200,9207");
         respMessageMap.put("1208", "9200,9208");
         respMessageMap.put("1209", "9200,9209");
@@ -74,13 +72,6 @@ public class DefaultMessageBuilder {
         ExchangeMessage resp = new ExchangeMessage(ExchangeMessage.MESSAGEID_EXCHANGE_DOWNSTREAM_MESSAGE, message, UUID.randomUUID().toString().replaceAll("-", ""), exchangeMessage.getGatewayId());
         logger.info("******仿真模拟上级平台应答消息,message={}", resp);
         return resp;
-    }
-
-    private static Map<String, Object> build1002MessageBody() {
-        Map<String, Object> messageBody = new HashMap<String, Object>();
-        messageBody.put("result", 0);
-        messageBody.put("verifyCode", 789);
-        return messageBody;
     }
 
     private static Map<String, Object> build1004MessageBody() {

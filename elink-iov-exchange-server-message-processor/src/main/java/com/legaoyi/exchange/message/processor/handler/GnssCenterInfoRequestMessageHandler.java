@@ -20,7 +20,8 @@ public class GnssCenterInfoRequestMessageHandler extends MessageHandler {
     @Override
     public void handle(ExchangeMessage message) throws Exception {
         if (message.getMessageId().equals(ExchangeMessage.MESSAGEID_EXCHANGE_GNSS_CENTER_INFO_REQUEST_MESSAGE)) {
-            List<?> list = new ArrayList<Object>();// 补充下级平台信息,todo
+            List<Object> list = new ArrayList<Object>();
+            //不使用网关inferior-platforms.xml配置下级平台信息而是在业务平台管理时，需要同步相关信息到网关
             if (list != null && !list.isEmpty()) {
                 commonDownstreamMessageProducer.send(message.getGatewayId(), new ExchangeMessage(ExchangeMessage.MESSAGEID_EXCHANGE_GNSS_CENTER_INFO_RESP_MESSAGE, list, null, message.getGatewayId()));
             }

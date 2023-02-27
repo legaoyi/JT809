@@ -2,8 +2,6 @@ package com.legaoyi.exchange.message.processor.handler;
 
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -17,8 +15,6 @@ import com.legaoyi.mq.MQMessageProducer;
 @Component(Constants.ELINK_MESSAGE_PROCESSOR_BEAN_PREFIX + "jt809_2011_2011_1200" + Constants.ELINK_MESSAGE_PROCESSOR_MESSAGE_HANDLER_BEAN_SUFFIX)
 public class Jt809_2011_2011_1200_MessageHandler extends MessageHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(Jt809_2011_2011_1200_MessageHandler.class);
-
     @Autowired
     @Qualifier("commonDownstreamMessageProducer")
     private MQMessageProducer commonDownstreamMessageProducer;
@@ -26,7 +22,6 @@ public class Jt809_2011_2011_1200_MessageHandler extends MessageHandler {
     @SuppressWarnings("unchecked")
     @Override
     public void handle(ExchangeMessage exchangeMessage) throws Exception {
-        logger.info("******下级平台1200消息总入口，handle 1200 message={}", exchangeMessage);
         Map<String, Object> message = (Map<String, Object>) exchangeMessage.getMessage();
         Map<String, Object> messageHeader = (Map<String, Object>) message.get(Constants.MAP_KEY_MESSAGE_HEADER);
 
@@ -38,7 +33,7 @@ public class Jt809_2011_2011_1200_MessageHandler extends MessageHandler {
 
         String dataType = null;
         if (messageBody != null) {
-            dataType = (String) messageBody.get("dataType");
+            dataType = (String) messageBody.get(Constants.MAP_KEY_DATA_TYPE);
         }
 
         // 调用消息处理handler
