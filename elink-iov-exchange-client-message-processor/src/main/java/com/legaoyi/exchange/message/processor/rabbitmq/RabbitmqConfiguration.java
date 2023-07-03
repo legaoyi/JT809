@@ -1,0 +1,21 @@
+package com.legaoyi.exchange.message.processor.rabbitmq;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import com.legaoyi.mq.MQMessageProducer;
+import com.legaoyi.rabbitmq.RabbitmqDirectExchangeMessageProducer;
+
+@Configuration("rabbitmqConfiguration")
+@ConditionalOnProperty(name= {"spring.rabbitmq.host"})
+public class RabbitmqConfiguration {
+
+    @Value("${rabbitmq.upstream.message.exchange}")
+    private String upstreamMessageExchange;
+
+    @Bean("upstreamMessageProducer")
+    public MQMessageProducer upstreamMessageProducer() {
+        return new RabbitmqDirectExchangeMessageProducer(upstreamMessageExchange);
+    }
+}
