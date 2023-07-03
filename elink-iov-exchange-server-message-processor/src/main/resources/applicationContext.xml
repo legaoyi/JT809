@@ -37,4 +37,8 @@
        <alias alias="elink_jt809_2019_1078_1800_messageHandler"  name="elink_jt809_2011_2011_1800_messageHandler"/>
        <alias alias="elink_jt809_2019_1078_1801_messageHandler"  name="elink_jt809_2011_2011_1801_messageHandler"/>
        
+       
+       
+       <alias alias="elink_gb32960_2016_03_messageHandler"  name="elink_gb32960_2016_02_messageHandler"/>
+       
 </beans>

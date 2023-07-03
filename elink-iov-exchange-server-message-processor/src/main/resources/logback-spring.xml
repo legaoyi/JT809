@@ -68,7 +68,12 @@
 		</encoder>
 	</appender>
 
-    <logger name="com.legaoyi.iov.message.processor.mq" level="INFO" additivity="false">
+    <logger name="com.legaoyi.exchange.message.processor.kafka" level="INFO" additivity="false">
+        <appender-ref ref="mqAppender" />
+        <appender-ref ref="errorAppender" />
+    </logger>
+    
+    <logger name="com.legaoyi.exchange.message.processor.rabbitmq" level="INFO" additivity="false">
         <appender-ref ref="mqAppender" />
         <appender-ref ref="errorAppender" />
     </logger>

@@ -9,28 +9,24 @@ import org.springframework.stereotype.Component;
 import com.legaoyi.exchange.message.processor.util.Constants;
 import com.legaoyi.exchange.message.processor.util.ExchangeMessage;
 
-/**
- * 下级平台实时上传车辆定位消息
- * @author gaoshengbo
- *
- */
-@Component(Constants.ELINK_MESSAGE_PROCESSOR_BEAN_PREFIX + "jt809_2011_2011_1202" + Constants.ELINK_MESSAGE_PROCESSOR_MESSAGE_HANDLER_BEAN_SUFFIX)
-public class Jt809_2011_2011_1202_MessageHandler extends MessageHandler {
+@Component(Constants.ELINK_MESSAGE_PROCESSOR_BEAN_PREFIX + "gb32960_2016_05" + Constants.ELINK_MESSAGE_PROCESSOR_MESSAGE_HANDLER_BEAN_SUFFIX)
+public class Gb32960_2016_2016_05_MessageHandler extends MessageHandler {
 
-    private static final Logger logger = LoggerFactory.getLogger(Jt809_2011_2011_1202_MessageHandler.class);
-
+    private static final Logger logger = LoggerFactory.getLogger(Gb32960_2016_2016_05_MessageHandler.class);
 
     @SuppressWarnings("unchecked")
     @Override
     public void handle(ExchangeMessage exchangeMessage) throws Exception {
-        //位置信息处理
-        logger.info("*******handle 1202 message={}", exchangeMessage);
-
         Map<String, Object> message = (Map<String, Object>) exchangeMessage.getMessage();
         Map<String, Object> messageHeader = (Map<String, Object>) message.get(Constants.MAP_KEY_MESSAGE_HEADER);
+
+        String protocol = (String) messageHeader.get(Constants.MAP_KEY_PROTOCOL);
+        String protocolVersion = (String) messageHeader.get(Constants.MAP_KEY_PROTOCOL_VERSION);
+        // String messageId = (String) messageHeader.get(Constants.MAP_KEY_MESSAGE_ID);
+
         Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_BODY);
 
-        //这里可以根据业务需要，进行处理，以及把消息保存数据库，todo。注意最好是批量保存数据以提高性能
+        logger.info("******gb32960，平台登入消息,message={}", exchangeMessage);
     }
 
 }

@@ -36,7 +36,7 @@ public class Jt809_2011_2011_1201_MessageHandler extends MessageHandler {
 
         Map<String, Object> message = (Map<String, Object>) exchangeMessage.getMessage();
         Map<String, Object> messageHeader = (Map<String, Object>) message.get(Constants.MAP_KEY_MESSAGE_HEADER);
-        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY);
+        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_BODY);
 
         // 这里可以根据业务需要，进行处理，以及把消息保存数据库，可以下发9601请求车辆静态信息
         Map<String, Object> respMessageHeader = new HashMap<String, Object>();
@@ -50,7 +50,7 @@ public class Jt809_2011_2011_1201_MessageHandler extends MessageHandler {
 
         Map<String, Object> resp = new HashMap<String, Object>();
         resp.put(Constants.MAP_KEY_MESSAGE_HEADER, respMessageHeader);
-        resp.put(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY, respMessageBody);
+        resp.put(Constants.MAP_KEY_MESSAGE_BODY, respMessageBody);
         commonDownstreamMessageProducer.send(exchangeMessage.getGatewayId(), new ExchangeMessage(ExchangeMessage.MESSAGEID_EXCHANGE_DOWNSTREAM_MESSAGE, resp, null, exchangeMessage.getGatewayId()));
 
     }

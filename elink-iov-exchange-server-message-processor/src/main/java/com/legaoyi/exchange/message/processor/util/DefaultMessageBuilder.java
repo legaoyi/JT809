@@ -29,7 +29,7 @@ public class DefaultMessageBuilder {
     public static ExchangeMessage buildRespMessage(ExchangeMessage exchangeMessage) {
         Map<String, Object> message = (Map<String, Object>) exchangeMessage.getMessage();
         Map<String, Object> messageHeader = (Map<String, Object>) message.get(Constants.MAP_KEY_MESSAGE_HEADER);
-        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY);
+        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_BODY);
 
         String messageId = (String) messageHeader.get(Constants.MAP_KEY_MESSAGE_ID);
         String dataType = null;
@@ -64,7 +64,7 @@ public class DefaultMessageBuilder {
         try {
             method = DefaultMessageBuilder.class.getDeclaredMethod("build" + messageId + "MessageBody", new Class[] {});
             method.setAccessible(true);
-            message.put(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY, method.invoke(DefaultMessageBuilder.class, new Object[] {}));
+            message.put(Constants.MAP_KEY_MESSAGE_BODY, method.invoke(DefaultMessageBuilder.class, new Object[] {}));
         } catch (Exception e) {
             e.printStackTrace();
         }

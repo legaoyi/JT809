@@ -4,7 +4,7 @@ public class Constants {
 
     public static final String MAP_KEY_MESSAGE_HEADER = "messageHeader";
 
-    public static final String MAP_KEY_MESSAGE_MESSAGE_BODY = "messageBody";
+    public static final String MAP_KEY_MESSAGE_BODY = "messageBody";
 
     public static final String MAP_KEY_MESSAGE_ID = "messageId";
 

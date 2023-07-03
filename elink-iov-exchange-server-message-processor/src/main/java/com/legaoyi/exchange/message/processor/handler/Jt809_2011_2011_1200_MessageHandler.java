@@ -29,7 +29,7 @@ public class Jt809_2011_2011_1200_MessageHandler extends MessageHandler {
         String protocolVersion = (String) messageHeader.get(Constants.MAP_KEY_PROTOCOL_VERSION);
         // String messageId = (String) messageHeader.get(Constants.MAP_KEY_MESSAGE_ID);
 
-        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY);
+        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_BODY);
 
         String dataType = null;
         if (messageBody != null) {

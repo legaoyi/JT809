@@ -28,7 +28,7 @@ public class Jt809_2011_2011_1601_MessageHandler extends MessageHandler {
 
         Map<String, Object> message = (Map<String, Object>) exchangeMessage.getMessage();
         Map<String, Object> messageHeader = (Map<String, Object>) message.get(Constants.MAP_KEY_MESSAGE_HEADER);
-        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_MESSAGE_BODY);
+        Map<?, ?> messageBody = (Map<?, ?>) message.get(Constants.MAP_KEY_MESSAGE_BODY);
 
     }
 
