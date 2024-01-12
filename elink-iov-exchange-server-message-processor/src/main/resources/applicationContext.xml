@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.3.xsd"
+	default-lazy-init="true">
+	   <alias alias="elink_jt809_2011_2011_1600_messageHandler"  name="elink_jt809_2011_2011_1200_messageHandler"/>
+	   <alias alias="elink_jt809_2011_2011_1800_messageHandler"  name="elink_jt809_2011_2011_1200_messageHandler"/>
+	
+       <alias alias="elink_jt809_2011_1078_1200_messageHandler"  name="elink_jt809_2011_2011_1200_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1201_messageHandler"  name="elink_jt809_2011_2011_1201_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1202_messageHandler"  name="elink_jt809_2011_2011_1202_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1203_messageHandler"  name="elink_jt809_2011_2011_1203_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1600_messageHandler"  name="elink_jt809_2011_2011_1600_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1601_messageHandler"  name="elink_jt809_2011_2011_1601_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1800_messageHandler"  name="elink_jt809_2011_2011_1800_messageHandler"/>
+       <alias alias="elink_jt809_2011_1078_1801_messageHandler"  name="elink_jt809_2011_2011_1801_messageHandler"/>
+       
+       <alias alias="elink_jt809_2019_2019_1200_messageHandler"  name="elink_jt809_2011_2011_1200_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1201_messageHandler"  name="elink_jt809_2011_2011_1201_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1202_messageHandler"  name="elink_jt809_2011_2011_1202_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1203_messageHandler"  name="elink_jt809_2011_2011_1203_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1600_messageHandler"  name="elink_jt809_2011_2011_1600_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1601_messageHandler"  name="elink_jt809_2011_2011_1601_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1800_messageHandler"  name="elink_jt809_2011_2011_1800_messageHandler"/>
+       <alias alias="elink_jt809_2019_2019_1801_messageHandler"  name="elink_jt809_2011_2011_1801_messageHandler"/>
+       
+       <alias alias="elink_jt809_2019_1078_1200_messageHandler"  name="elink_jt809_2011_2011_1200_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1201_messageHandler"  name="elink_jt809_2011_2011_1201_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1202_messageHandler"  name="elink_jt809_2011_2011_1202_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1203_messageHandler"  name="elink_jt809_2011_2011_1203_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1600_messageHandler"  name="elink_jt809_2011_2011_1600_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1601_messageHandler"  name="elink_jt809_2011_2011_1601_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1800_messageHandler"  name="elink_jt809_2011_2011_1800_messageHandler"/>
+       <alias alias="elink_jt809_2019_1078_1801_messageHandler"  name="elink_jt809_2011_2011_1801_messageHandler"/>
+       
+       
+       
+       <alias alias="elink_gb32960_2016_03_messageHandler"  name="elink_gb32960_2016_02_messageHandler"/>
+       
+</beans>
