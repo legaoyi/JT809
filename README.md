@@ -61,9 +61,9 @@ server.port=6039
 
 6、elink-iov-exchange-server-message-processor  为上级平台消息处理应用程序，连接elink-iov-exchange-server旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发 
 
-7、elink-iov-jt905-exchange-client-message-processor  为JT905下级平台消息处理应用程序，连接elink-iov-jt905-exchange-client旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发 
+7、elink-iov-jt905-exchange-client-message-processor  为JT905下级平台消息处理应用程序，连接elink-iov-jt905-exchange-client旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发(新版中间件请使用elink-iov-exchange-client-message-processor) 
 
-8、elink-iov-jt905-exchange-server-message-processor  为JT905上级平台消息处理应用程序，连接elink-iov-jt905-exchange-server旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发 
+8、elink-iov-jt905-exchange-server-message-processor  为JT905上级平台消息处理应用程序，连接elink-iov-jt905-exchange-server旗舰版进行上级平台业务处理，开发者可根据自身业务进行二次开发(新版中间件请使用elink-iov-exchange-server-message-processor) 
 
 **软件运行** 
 
